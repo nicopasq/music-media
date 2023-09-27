@@ -12,9 +12,15 @@ function App() {
   })
 
   return (
+    <BrowserRouter>
     <div>
-      <h1>{page.page}</h1>
+      <Switch>
+        <Route path="/home">
+          <h1>{page.page}</h1>
+        </Route>
+      </Switch>
     </div>
+    </BrowserRouter>
   )
 
   // return (
