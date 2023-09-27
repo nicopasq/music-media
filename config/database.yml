@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: music_media_production
-  username: music_media
-  password: <%= ENV["MUSIC_MEDIA_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
