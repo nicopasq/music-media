@@ -3,7 +3,14 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
+  const [page, setPage] = useState('')
 
+  useEffect(() =>{
+    fetch("/home")
+    .then(r => r.json)
+    .then(data => setPage(data))
+  })
+  console.log(page)
   // return (
   //   <BrowserRouter>
   //     <div className="App">
