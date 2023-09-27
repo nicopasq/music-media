@@ -10,7 +10,13 @@ function App() {
     .then(r => r.json)
     .then(data => setPage(data))
   })
-  console.log(page)
+
+  return (
+    <div>
+      <h1>{page}</h1>
+    </div>
+  )
+
   // return (
   //   <BrowserRouter>
   //     <div className="App">
